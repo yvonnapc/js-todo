@@ -74,6 +74,9 @@ var ToDoList;
     };
 })(ToDoList || (ToDoList = {}));
 ///<reference path="to-do-classes-interfaces.ts"/>
+///<reference path="to-do-people.ts"/>
+///<reference path="to-do-listing-functions.ts"/>
+///<reference path="to-do-create-tasks.ts"/>
 var ToDoList;
 (function (ToDoList) {
     ToDoList.describeTasksForPerson = function (assignee, taskCollection) {
@@ -87,6 +90,35 @@ var ToDoList;
         return descriptions;
     };
 })(ToDoList || (ToDoList = {}));
+$(document).ready(function () {
+    var people = [];
+    var tasks = [];
+    // var homeTasks = $('#addHomeTask').val();
+    var workTasks = $('#addWorkTask').val();
+    var workDescription = $('#workDescription').val();
+    var hobbyTasks = $('#addHobbyTask').val();
+    var hobbyDescription = $('#hobbyDescription').val();
+    $('#addHomeTask').submit(function (event) {
+        event.preventDefault();
+        var home = $('#addHomeTask').val();
+        var homeDescription = $('#homeDescription').val();
+        var homeTask = new ToDoList.HomeTask(description, priority);
+        tasks.push(new ToDoList.HomeTask);
+        $('#showHomeTasks').append('<h3>Home Tasks:</h3><li>' +
+            homeTask.home + '</li>' +
+            '<li>', homeTask.homeDescription + '</li>');
+        console.log(homeTask.home);
+    });
+    // $('#homeTasks').click(function(){
+    //   for(var task of homeTasks){
+    //     $('#showHomeTask').append('<p>' + homeTasks + '</p>');
+    //   }
+    // });
+    //
+    //
+    // $('#hobbyTasks').click()
+    // $('#workTasks').click()
+});
 ///<reference path="to-do-classes-interfaces.ts" />
 ///<reference path="to-do-people.ts"/>
 ///<reference path="to-do-listing-functions.ts"/>
@@ -108,10 +140,9 @@ tasks.push(new ToDoList.WorkTask(tomorrow, "Go to meeting", "Medium", people.tho
 tasks.push(new ToDoList.WorkTask(nextDay, "Clean ceiling", "Low", people.loki));
 tasks.push(new ToDoList.WorkTask(tomorrow, "Buy new shirt", "Low", people.thor));
 tasks.push(new ToDoList.WorkTask(tomorrow, "Save the world", "High", people.thor));
-console.log(tasks);
-var thorTasks = ToDoList.describeTasksForPerson(people.thor, tasks);
-console.log("Here are thor's tasks");
-for (var _i = 0, thorTasks_1 = thorTasks; _i < thorTasks_1.length; _i++) {
-    var task = thorTasks_1[_i];
-    console.log(task);
-}
+// console.log(tasks);
+// var thorTasks = ToDoList.describeTasksForPerson(people.thor, tasks);
+// // console.log("Here are thor's tasks");
+// for (var task of thorTasks){
+//   console.log(task);
+// }
