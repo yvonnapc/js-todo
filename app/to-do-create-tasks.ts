@@ -7,7 +7,7 @@
 var people = ToDoList.people;
 
 var tasks = [];
-tasks.push(new ToDoList.HomeTask("Do dishes", "High"));
+tasks.push(new ToDoList.HomeTask("Do dishes", "High", people.diane));
 tasks.push(new ToDoList.HomeTask("Buy chocolate", "low", people.diane));
 tasks.push(new ToDoList.HomeTask("Wash laundry", "High"));
 tasks[0].markDone();

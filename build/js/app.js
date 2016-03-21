@@ -99,7 +99,7 @@ var ToDoList;
                 homeTasks.push(task);
             }
         }
-        console.log(homeTasks);
+        // console.log(homeTasks);
         return homeTasks;
     };
 })(ToDoList || (ToDoList = {}));
@@ -113,7 +113,7 @@ var ToDoList;
                 workTasks.push(task);
             }
         }
-        console.log(workTasks);
+        // console.log(workTasks);
         return workTasks;
     };
 })(ToDoList || (ToDoList = {}));
@@ -127,7 +127,7 @@ var ToDoList;
                 hobbyTasks.push(task);
             }
         }
-        console.log(hobbyTasks);
+        // console.log(hobbyTasks);
         return hobbyTasks;
     };
 })(ToDoList || (ToDoList = {}));
@@ -141,7 +141,7 @@ var ToDoList;
                 highPriority.push(task);
             }
         }
-        console.log(highPriority);
+        // console.log(highPriority);
         return highPriority;
     };
 })(ToDoList || (ToDoList = {}));
@@ -155,7 +155,7 @@ var ToDoList;
                 mediumPriority.push(task);
             }
         }
-        console.log(mediumPriority);
+        // console.log(mediumPriority);
         return mediumPriority;
     };
 })(ToDoList || (ToDoList = {}));
@@ -169,26 +169,24 @@ var ToDoList;
                 lowPriority.push(task);
             }
         }
-        console.log(lowPriority);
+        // console.log(lowPriority);
         return lowPriority;
     };
 })(ToDoList || (ToDoList = {}));
-// $(document).ready(function(){
-//
-//   var people = [];
-//   var tasks = [];
-//
-//
-//   $('#homeTasks').click(function(){
-//     for(var task of homeTasks){
-//       $('#showHomeTask').append('<p>' + homeTasks + '</p>');
-//     }
-//   });
-//
-//
-//   $('#hobbyTasks').click()
-//   $('#workTasks').click()
-// });
+$(document).ready(function () {
+    // var people = [];
+    // var tasks = [];
+    $('#homeTasks').click(function () {
+        var homeTasks = ToDoList.getHomeTasks(tasks);
+        for (var _i = 0, homeTasks_1 = homeTasks; _i < homeTasks_1.length; _i++) {
+            task = homeTasks_1[_i];
+            $('#showHomeTasks').append('<p>' + task.description + '</p>');
+        }
+        console.log(homeTasks);
+    });
+    // $('#hobbyTasks').click()
+    // $('#workTasks').click()
+});
 // USER-INTERFACE LOGIC FOR ADDING TASKS
 // var homeTasks = $('#addHomeTask').val();
 // var workTasks = $('#addWorkTask').val();
@@ -213,7 +211,7 @@ var ToDoList;
 ///<reference path="to-do-listing-functions.ts"/>
 var people = ToDoList.people;
 var tasks = [];
-tasks.push(new ToDoList.HomeTask("Do dishes", "High"));
+tasks.push(new ToDoList.HomeTask("Do dishes", "High", people.diane));
 tasks.push(new ToDoList.HomeTask("Buy chocolate", "low", people.diane));
 tasks.push(new ToDoList.HomeTask("Wash laundry", "High"));
 tasks[0].markDone();
