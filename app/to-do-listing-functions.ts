@@ -15,7 +15,7 @@ module ToDoList{
 
 module ToDoList{
   export var getHomeTasks = function(taskCollection: Task[]): Task[]{
-    var homeTasks: Task[] = [];
+    var homeTasks = [];
     for (var task of taskCollection){
       if(task instanceof(HomeTask)){
         homeTasks.push(task);
@@ -23,6 +23,19 @@ module ToDoList{
     }
     console.log(homeTasks);
     return homeTasks;
+  }
+}
+
+module ToDoList{
+  export var getWorkTasks = function(taskCollection: Task[]): Task[]{
+    var workTasks = [];
+    for (var task of taskCollection){
+      if(task instanceof WorkTask){
+        workTasks.push(task);
+      }
+    }
+    console.log(workTasks);
+    return workTasks;
   }
 }
 

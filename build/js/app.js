@@ -103,6 +103,20 @@ var ToDoList;
         return homeTasks;
     };
 })(ToDoList || (ToDoList = {}));
+var ToDoList;
+(function (ToDoList) {
+    ToDoList.getWorkTasks = function (taskCollection) {
+        var workTasks = [];
+        for (var _i = 0, taskCollection_3 = taskCollection; _i < taskCollection_3.length; _i++) {
+            var task = taskCollection_3[_i];
+            if (task instanceof ToDoList.WorkTask) {
+                workTasks.push(task);
+            }
+        }
+        console.log(workTasks);
+        return workTasks;
+    };
+})(ToDoList || (ToDoList = {}));
 // $(document).ready(function(){
 //
 //   var people = [];
@@ -160,6 +174,7 @@ tasks.push(new ToDoList.WorkTask(nextDay, "Clean ceiling", "Low", people.loki));
 tasks.push(new ToDoList.WorkTask(tomorrow, "Buy new shirt", "Low", people.thor));
 tasks.push(new ToDoList.WorkTask(tomorrow, "Save the world", "High", people.thor));
 ToDoList.getHomeTasks(tasks);
+ToDoList.getWorkTasks(tasks);
 // console.log(tasks);
 // var thorTasks = ToDoList.describeTasksForPerson(people.thor, tasks);
 // // console.log("Here are thor's tasks");

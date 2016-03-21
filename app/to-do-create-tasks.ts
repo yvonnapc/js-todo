@@ -29,6 +29,7 @@ tasks.push(new ToDoList.WorkTask(tomorrow, "Save the world", "High", people.thor
 
 
 ToDoList.getHomeTasks(tasks);
+ToDoList.getWorkTasks(tasks);
 
 
 // console.log(tasks);
