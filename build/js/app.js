@@ -184,8 +184,42 @@ $(document).ready(function () {
         }
         console.log(homeTasks);
     });
-    // $('#hobbyTasks').click()
-    // $('#workTasks').click()
+    $('#hobbyTasks').click(function () {
+        var hobbyTasks = ToDoList.getHobbyTasks(tasks);
+        for (var _i = 0, hobbyTasks_1 = hobbyTasks; _i < hobbyTasks_1.length; _i++) {
+            task = hobbyTasks_1[_i];
+            $('#showHobbyTasks').append('<p>' + task.description + '</p>');
+        }
+        console.log(hobbyTasks);
+    });
+    $('#workTasks').click(function () {
+        var workTasks = ToDoList.getWorkTasks(tasks);
+        for (var _i = 0, workTasks_1 = workTasks; _i < workTasks_1.length; _i++) {
+            task = workTasks_1[_i];
+            $('#showWorkTasks').append('<p>' + task.description + '</p>');
+        }
+    });
+    $('#highPriority').click(function () {
+        var highPriority = ToDoList.getHighPriority(tasks);
+        for (var _i = 0, highPriority_1 = highPriority; _i < highPriority_1.length; _i++) {
+            task = highPriority_1[_i];
+            $('#showHighTasks').append('<p>' + task.description + '</p>');
+        }
+    });
+    $('#mediumPriority').click(function () {
+        var mediumPriority = ToDoList.getMediumPriority(tasks);
+        for (var _i = 0, mediumPriority_1 = mediumPriority; _i < mediumPriority_1.length; _i++) {
+            task = mediumPriority_1[_i];
+            $('#showMediumTasks').append('<p>' + task.description + '</p>');
+        }
+    });
+    $('#lowPriority').click(function () {
+        var lowPriority = ToDoList.getLowPriority(tasks);
+        for (var _i = 0, lowPriority_1 = lowPriority; _i < lowPriority_1.length; _i++) {
+            task = lowPriority_1[_i];
+            $('#showLowTasks').append('<p>' + task.description + '</p>');
+        }
+    });
 });
 // USER-INTERFACE LOGIC FOR ADDING TASKS
 // var homeTasks = $('#addHomeTask').val();

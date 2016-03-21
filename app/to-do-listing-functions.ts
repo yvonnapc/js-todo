@@ -107,9 +107,42 @@ $(document).ready(function(){
 
   });
 
+  $('#hobbyTasks').click(function(){
+    var hobbyTasks = ToDoList.getHobbyTasks(tasks);
+    for (task of hobbyTasks){
+      $('#showHobbyTasks').append('<p>' + task.description + '</p>');
+    }
+    console.log(hobbyTasks);
+  });
 
-  // $('#hobbyTasks').click()
-  // $('#workTasks').click()
+  $('#workTasks').click(function(){
+    var workTasks = ToDoList.getWorkTasks(tasks);
+    for (task of workTasks){
+      $('#showWorkTasks').append('<p>' + task.description + '</p>');
+    }
+  });
+
+  $('#highPriority').click(function(){
+    var highPriority = ToDoList.getHighPriority(tasks);
+    for (task of highPriority){
+      $('#showHighTasks').append('<p>' + task.description + '</p>');
+    }
+  });
+
+  $('#mediumPriority').click(function(){
+    var mediumPriority = ToDoList.getMediumPriority(tasks);
+    for (task of mediumPriority){
+      $('#showMediumTasks').append('<p>' + task.description + '</p>');
+    }
+  });
+
+  $('#lowPriority').click(function(){
+    var lowPriority = ToDoList.getLowPriority(tasks);
+    for (task of lowPriority){
+      $('#showLowTasks').append('<p>' + task.description + '</p>');
+    }
+  });
+
 });
 
 // USER-INTERFACE LOGIC FOR ADDING TASKS
