@@ -18,7 +18,7 @@ var Task = (function () {
 var HomeTask = (function (_super) {
     __extends(HomeTask, _super);
     function HomeTask(description, priority, assignedTo) {
-        _super.call(this, description, priority);
+        _super.call(this, description, priority, assignedTo);
         this.description = description;
         this.priority = priority;
         this.assignedTo = assignedTo;
