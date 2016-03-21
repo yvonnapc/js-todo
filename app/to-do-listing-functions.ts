@@ -65,6 +65,33 @@ module ToDoList{
   }
 }
 
+module ToDoList{
+  export var getMediumPriority = function(taskCollection: Task[]): Task[]{
+    var mediumPriority = [];
+    for(var task of taskCollection){
+      if (task.priority === "Medium"){
+        mediumPriority.push(task);
+      }
+    }
+    console.log(mediumPriority);
+    return mediumPriority;
+  }
+}
+
+module ToDoList{
+  export var getLowPriority = function(taskCollection: Task[]): Task[]{
+    var lowPriority = [];
+    for(var task of taskCollection){
+      if (task.priority === "Low"){
+        lowPriority.push(task);
+      }
+    }
+    console.log(lowPriority);
+    return lowPriority;
+  }
+}
+
+
 // $(document).ready(function(){
 //
 //   var people = [];

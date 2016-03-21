@@ -32,6 +32,8 @@ ToDoList.getHomeTasks(tasks);
 ToDoList.getWorkTasks(tasks);
 ToDoList.getHobbyTasks(tasks);
 ToDoList.getHighPriority(tasks);
+ToDoList.getMediumPriority(tasks);
+ToDoList.getLowPriority(tasks);
 
 // console.log(tasks);
 // var thorTasks = ToDoList.describeTasksForPerson(people.thor, tasks);
