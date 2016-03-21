@@ -1,5 +1,6 @@
-var number;
-var otherNumber;
+var number: number;
+var otherNumber: number;
+
 number = parseInt(prompt("please enter a number"));
 otherNumber = parseInt(prompt("enter a second number"));
 var sum = number + otherNumber;
