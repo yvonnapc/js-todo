@@ -2,6 +2,8 @@
 ///<reference path="to-do-people.ts"/>
 ///<reference path="to-do-listing-functions.ts"/>
 
+
+
 var people = ToDoList.people;
 
 var tasks = [];
@@ -24,6 +26,10 @@ tasks.push(new ToDoList.WorkTask(tomorrow, "Go to meeting", "Medium", people.tho
 tasks.push(new ToDoList.WorkTask(nextDay, "Clean ceiling", "Low", people.loki));
 tasks.push(new ToDoList.WorkTask(tomorrow, "Buy new shirt", "Low", people.thor));
 tasks.push(new ToDoList.WorkTask(tomorrow, "Save the world", "High", people.thor));
+
+
+ToDoList.getHomeTasks(tasks);
+
 
 // console.log(tasks);
 // var thorTasks = ToDoList.describeTasksForPerson(people.thor, tasks);
