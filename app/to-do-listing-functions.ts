@@ -39,6 +39,19 @@ module ToDoList{
   }
 }
 
+module ToDoList{
+  export var getHobbyTasks = function(taskCollection: Task[]): Task[]{
+    var hobbyTasks = [];
+    for (var task of taskCollection){
+      if (task instanceof HobbyTask){
+        hobbyTasks.push(task);
+      }
+    }
+    console.log(hobbyTasks);
+    return hobbyTasks;
+  }
+}
+
 // $(document).ready(function(){
 //
 //   var people = [];
