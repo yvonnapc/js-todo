@@ -1,9 +1,9 @@
 module ToDoList{
   export interface ITask {
-    description: string,
-    done: boolean,
-    priority: string,
-    markDone(): void,
+    description: string;
+    done: boolean;
+    priority: string;
+    markDone(): void;
     assignedTo?: IPerson;
   }
 
@@ -27,8 +27,14 @@ module ToDoList{
   }
 
    export class WorkTask extends Task{
-     constructor(public dueDate: Date, public description: string, public assignedTo: IPerson){
-       super(description, "low");
+     constructor(public dueDate: Date, public description: string, public priority: string, public assignedTo: IPerson){
+       super(description, priority, assignedTo);
+    }
+  }
+
+  export class HobbyTask extends Task{
+    constructor(public description: string){
+      super(description, "low");
     }
   }
 }
