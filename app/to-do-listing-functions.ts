@@ -52,6 +52,19 @@ module ToDoList{
   }
 }
 
+module ToDoList{
+  export var getHighPriority = function(taskCollection: Task[]): Task[]{
+    var highPriority = [];
+    for(var task of taskCollection){
+      if (task.priority === "High"){
+        highPriority.push(task);
+      }
+    }
+    console.log(highPriority);
+    return highPriority;
+  }
+}
+
 // $(document).ready(function(){
 //
 //   var people = [];

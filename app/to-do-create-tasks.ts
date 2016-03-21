@@ -31,7 +31,7 @@ tasks.push(new ToDoList.WorkTask(tomorrow, "Save the world", "High", people.thor
 ToDoList.getHomeTasks(tasks);
 ToDoList.getWorkTasks(tasks);
 ToDoList.getHobbyTasks(tasks);
-
+ToDoList.getHighPriority(tasks);
 
 // console.log(tasks);
 // var thorTasks = ToDoList.describeTasksForPerson(people.thor, tasks);
