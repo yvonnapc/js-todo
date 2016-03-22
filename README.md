@@ -6,7 +6,7 @@
 
 ## Description
 
-JavaScript Angular JS: Object-Oriented Typescript To-Do List App. This application serves as a platform for the user click various buttons that append tasks based on different criteria. The tasks are hard-coded, allowing the user to select tasks based on type (Home, Hobby, Work) or priority (High, Medium, Low). 
+JavaScript Angular JS: Object-Oriented Typescript To-Do List App. This application serves as a platform for the user click various buttons that append tasks based on different criteria. The tasks are hard-coded, allowing the user to select which tasks they want to see based on type (Home, Hobby, Work) or priority (High, Medium, Low). 
 
 ## Setup/Installation Requirements
 
